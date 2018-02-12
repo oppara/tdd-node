@@ -16,5 +16,5 @@ mocha, power-assert を使用して ES2015 で書く。
 ## テスト実行
 
 ```
-% npm text
+% npm test
 ```
