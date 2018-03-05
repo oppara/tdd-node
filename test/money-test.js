@@ -13,4 +13,9 @@ describe('Money', () => {
     product = five.times(3);
     assert.equal(15, product.amount);
   });
+
+  it('test equality', () => {
+    assert.strictEqual(new Dollar(5).equals(new Dollar(5)), true);
+    assert.strictEqual(new Dollar(5).equals(new Dollar(6)), false);
+  });
 });
