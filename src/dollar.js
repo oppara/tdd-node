@@ -9,4 +9,8 @@ export default class Dollar {
   times(multiplier) {
     return new Dollar(this.amount * multiplier);
   }
+
+  equals(obj) {
+    return this.amount === obj.amount;
+  }
 }
