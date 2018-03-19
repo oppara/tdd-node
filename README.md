@@ -11,6 +11,7 @@ mocha, power-assert を使用して ES2015 で書く。
 ```
 % npm init
 % npm install --save-dev mocha babel-register babel-preset-es2015 power-assert
+% npm install --save-dev eslint eslint-cli eslint-config-airbnb eslint-plugin-import eslint-plugin-node
 ```
 
 ## テスト実行
