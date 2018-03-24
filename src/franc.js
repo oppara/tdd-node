@@ -1,8 +1,11 @@
 'use strict';
 
-export default class Franc {
+import Money from '../src/money';
+
+export default class Franc extends Money {
 
   constructor(amount) {
+    super(amount);
     this.amount = amount;
   }
 
@@ -10,7 +13,4 @@ export default class Franc {
     return new Franc(this.amount * multiplier);
   }
 
-  equals(obj) {
-    return this.amount === obj.amount;
-  }
 }

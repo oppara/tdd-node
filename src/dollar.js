@@ -1,8 +1,11 @@
 'use strict';
 
-export default class Dollar {
+import Money from '../src/money';
+
+export default class Dollar extends Money {
 
   constructor(amount) {
+    super(amount);
     this.amount = amount;
   }
 
@@ -10,7 +13,4 @@ export default class Dollar {
     return new Dollar(this.amount * multiplier);
   }
 
-  equals(obj) {
-    return this.amount === obj.amount;
-  }
 }
