@@ -1,13 +1,13 @@
 'use strict';
 
-export default class Franc {
+export default class Dollar {
 
   constructor(amount) {
     this.amount = amount;
   }
 
   times(multiplier) {
-    return new Franc(this.amount * multiplier);
+    return new Dollar(this.amount * multiplier);
   }
 
   equals(obj) {
