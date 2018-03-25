@@ -16,6 +16,7 @@ describe('Money', () => {
     assert.strictEqual(new Dollar(5).equals(new Dollar(6)), false);
     assert.strictEqual(new Franc(5).equals(new Franc(5)), true);
     assert.strictEqual(new Franc(5).equals(new Franc(6)), false);
+    assert.strictEqual(new Franc(5).equals(new Dollar(5)), false);
   });
 
   it('test Franc multiplication', () => {
