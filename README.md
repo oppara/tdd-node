@@ -19,3 +19,4 @@ mocha, power-assert を使用して ES2015 で書く。
 ```
 % npm test
 ```
+
