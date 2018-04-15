@@ -23,4 +23,9 @@ describe('Money', () => {
     assert.equal(JSON.stringify(Money.franc(10)), JSON.stringify(five.times(2)));
     assert.equal(JSON.stringify(Money.franc(15)), JSON.stringify(five.times(3)));
   });
+
+  it('test currency', () => {
+    assert.equal('USD', Money.dollar(1).currency());
+    assert.equal('CHF', Money.franc(1).currency());
+  });
 });
