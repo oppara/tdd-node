@@ -7,9 +7,13 @@ class Money {
     this._currency = currency;
   }
 
+  times(multiplier) {
+    return new Money(this.amount * multiplier, this._currency);
+  }
+
   equals(obj) {
     return this.amount === obj.amount
-      && this.constructor === obj.constructor;
+      && this.currency() === obj.currency();
   }
 
   currency() {
@@ -26,15 +30,9 @@ class Money {
 }
 
 class Dollar extends Money {
-  times(multiplier) {
-    return Money.dollar(this.amount * multiplier);
-  }
 }
 
 class Franc extends Money {
-  times(multiplier) {
-    return Money.franc(this.amount * multiplier);
-  }
 }
 
-export { Money };
+export { Money, Franc };

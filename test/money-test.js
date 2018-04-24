@@ -1,7 +1,7 @@
 'use strict';
 
 import assert from 'power-assert';
-import { Money } from '../src/money';
+import { Money, Franc } from '../src/money';
 
 describe('Money', () => {
   it('test multiplication', () => {
@@ -27,5 +27,9 @@ describe('Money', () => {
   it('test currency', () => {
     assert.equal('USD', Money.dollar(1).currency());
     assert.equal('CHF', Money.franc(1).currency());
+  });
+
+  it('test different class equality', () => {
+    assert.strictEqual(new Money(10, 'CHF').equals(new Franc(10, 'CHF')), true);
   });
 });
