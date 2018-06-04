@@ -21,18 +21,12 @@ class Money {
   }
 
   static dollar(amount) {
-    return new Dollar(amount, 'USD');
+    return new Money(amount, 'USD');
   }
 
   static franc(amount) {
-    return new Franc(amount, 'CHF');
+    return new Money(amount, 'CHF');
   }
 }
 
-class Dollar extends Money {
-}
-
-class Franc extends Money {
-}
-
-export { Money, Franc };
+export { Money };
